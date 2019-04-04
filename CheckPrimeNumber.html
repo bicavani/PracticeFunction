@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CheckPrimeNumber</title>
+</head>
+<body>
+  <input id="inputNumber" type="number">
+  <button type="button" onclick="checkPrimeNumber()">Check</button>
+  <script>
+    function checkPrimeNumber() {
+        let num = document.getElementById("inputNumber").value;
+        if (isPrimeNumber(num)) {
+            alert(num + ' la so nguyen to');
+        } 
+        else alert(num + " khong phai so nguyen to");
+    }
+    function isPrimeNumber(num) {
+        if (num <= 1) return false;
+        else if (num === 2) return true;
+        else {
+            for (let i = 2; i < num-1; i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+    }
+  </script>
+</body>
+</html>

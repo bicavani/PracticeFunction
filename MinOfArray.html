@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MinOfArray</title>
+</head>
+<body>
+  <script>
+      function minOfArray(arr) {
+          if (arr.length === 0) {
+              return document.write('Ham rong');
+          }
+          let min = arr[0];
+          for (let i = 1; i < arr.length; i++) {
+              if (min > arr[i]) min = arr[i];
+          }
+          return min;
+      }
+      let arr1 = [4,1,5,3,0,9];
+      let minOfArr1 = minOfArray(arr1);
+      document.write(minOfArr1);
+  </script>
+</body>
+</html>
